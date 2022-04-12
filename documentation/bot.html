@@ -1,0 +1,213 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html><head><title>Python: module bot</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+</head><body bgcolor="#f0f0f8">
+
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="heading">
+<tr bgcolor="#7799ee">
+<td valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial">&nbsp;<br><big><big><strong>bot</strong></big></big></font></td
+><td align=right valign=bottom
+><font color="#ffffff" face="helvetica, arial"><a href=".">index</a><br><a href="file:c%3A%5Cusers%5Ckyriakos%5Cdesktop%5Cprojects%20with%20tb%5Coar%5Cbot.py">c:\users\kyriakos\desktop\projects with tb\oar\bot.py</a></font></td></tr></table>
+    <p></p>
+<p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#aa55cc">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial"><big><strong>Modules</strong></big></font></td></tr>
+    
+<tr><td bgcolor="#aa55cc"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><table width="100%" summary="list"><tr><td width="25%" valign=top><a href="logging.html">logging</a><br>
+</td><td width="25%" valign=top><a href="os.html">os</a><br>
+</td><td width="25%" valign=top><a href="string.html">string</a><br>
+</td><td width="25%" valign=top></td></tr></table></td></tr></table><p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ee77aa">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial"><big><strong>Classes</strong></big></font></td></tr>
+    
+<tr><td bgcolor="#ee77aa"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><dl>
+<dt><font face="helvetica, arial"><a href="builtins.html#object">builtins.object</a>
+</font></dt><dd>
+<dl>
+<dt><font face="helvetica, arial"><a href="bot.html#Bot">Bot</a>
+</font></dt><dd>
+<dl>
+<dt><font face="helvetica, arial"><a href="bot.html#ChatterBotWrapper">ChatterBotWrapper</a>
+</font></dt></dl>
+</dd>
+<dt><font face="helvetica, arial"><a href="bot.html#BotAskResponse">BotAskResponse</a>
+</font></dt><dt><font face="helvetica, arial"><a href="bot.html#BotTrainResponse">BotTrainResponse</a>
+</font></dt><dt><font face="helvetica, arial"><a href="bot.html#ChatbotFactory">ChatbotFactory</a>
+</font></dt></dl>
+</dd>
+</dl>
+ <p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ffc8d8">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#000000" face="helvetica, arial"><a name="Bot">class <strong>Bot</strong></a>(<a href="builtins.html#object">builtins.object</a>)</font></td></tr>
+    
+<tr bgcolor="#ffc8d8"><td rowspan=2><tt>&nbsp;&nbsp;&nbsp;</tt></td>
+<td colspan=2><tt>Entity&nbsp;that&nbsp;interacts&nbsp;with&nbsp;the&nbsp;user&nbsp;for&nbsp;domain&nbsp;discovery&nbsp;and&nbsp;article&nbsp;summaries.<br>
+&nbsp;<br>
+In&nbsp;order&nbsp;to&nbsp;become&nbsp;one,&nbsp;one&nbsp;must&nbsp;implement&nbsp;ask&nbsp;(given&nbsp;a&nbsp;message,&nbsp;return&nbsp;an&nbsp;answer)&nbsp;and&nbsp;train&nbsp;(improve&nbsp;model&nbsp;based&nbsp;on&nbsp;domain&nbsp;discovery).<br>&nbsp;</tt></td></tr>
+<tr><td>&nbsp;</td>
+<td width="100%">Methods defined here:<br>
+<dl><dt><a name="Bot-ask"><strong>ask</strong></a>(self, message: &lt;module 'string' from 'C:\\Users\\Kyriakos\\AppData\\Local\\Programs\\Python\\Python37\\lib\\string.py'&gt;) -&gt; bot.BotAskResponse</dt><dd><tt>Asking&nbsp;a&nbsp;bot&nbsp;with&nbsp;a&nbsp;message.<br>
+&nbsp;<br>
+Input&nbsp;<br>
+-&nbsp;message:&nbsp;text&nbsp;from&nbsp;the&nbsp;user&nbsp;of&nbsp;type&nbsp;string.<br>
+&nbsp;<br>
+Output&nbsp;<br>
+-&nbsp;<a href="#BotAskResponse">BotAskResponse</a>&nbsp;containing&nbsp;relevant&nbsp;reply&nbsp;from&nbsp;the&nbsp;bot.</tt></dd></dl>
+
+<dl><dt><a name="Bot-train"><strong>train</strong></a>(self, reload=True) -&gt; bot.BotTrainResponse</dt><dd><tt>Training&nbsp;a&nbsp;model&nbsp;based&nbsp;on&nbsp;existing&nbsp;data.<br>
+&nbsp;<br>
+Input&nbsp;<br>
+-&nbsp;reload:&nbsp;whether&nbsp;to&nbsp;scrape&nbsp;for&nbsp;fields.<br>
+&nbsp;<br>
+Output&nbsp;<br>
+-&nbsp;<a href="#BotTrainResponse">BotTrainResponse</a>&nbsp;containing&nbsp;whether&nbsp;the&nbsp;train&nbsp;succeeded&nbsp;or&nbsp;failed.</tt></dd></dl>
+
+<hr>
+Data descriptors defined here:<br>
+<dl><dt><strong>__dict__</strong></dt>
+<dd><tt>dictionary&nbsp;for&nbsp;instance&nbsp;variables&nbsp;(if&nbsp;defined)</tt></dd>
+</dl>
+<dl><dt><strong>__weakref__</strong></dt>
+<dd><tt>list&nbsp;of&nbsp;weak&nbsp;references&nbsp;to&nbsp;the&nbsp;object&nbsp;(if&nbsp;defined)</tt></dd>
+</dl>
+</td></tr></table> <p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ffc8d8">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#000000" face="helvetica, arial"><a name="BotAskResponse">class <strong>BotAskResponse</strong></a>(<a href="builtins.html#object">builtins.object</a>)</font></td></tr>
+    
+<tr bgcolor="#ffc8d8"><td rowspan=2><tt>&nbsp;&nbsp;&nbsp;</tt></td>
+<td colspan=2><tt><a href="#BotAskResponse">BotAskResponse</a>(answer:&nbsp;&amp;lt;module&nbsp;'string'&nbsp;from&nbsp;'C:\\Users\\Kyriakos\\AppData\\Local\\Programs\\Python\\Python37\\lib\\string.py'&amp;gt;,&nbsp;captured_domains:&nbsp;List[str]&nbsp;=&nbsp;None)&nbsp;-&amp;gt;&nbsp;None<br>
+&nbsp;<br>
+<a href="#Bot">Bot</a>&nbsp;response&nbsp;when&nbsp;asked&nbsp;a&nbsp;question.<br>&nbsp;</tt></td></tr>
+<tr><td>&nbsp;</td>
+<td width="100%">Methods defined here:<br>
+<dl><dt><a name="BotAskResponse-__init__"><strong>__init__</strong></a>(self, answer: &lt;module 'string' from 'C:\\Users\\Kyriakos\\AppData\\Local\\Programs\\Python\\Python37\\lib\\string.py'&gt;, captured_domains: List[str] = None) -&gt; None</dt><dd><tt>Initialize&nbsp;self.&nbsp;&nbsp;See&nbsp;help(type(self))&nbsp;for&nbsp;accurate&nbsp;signature.</tt></dd></dl>
+
+<hr>
+Data descriptors defined here:<br>
+<dl><dt><strong>__dict__</strong></dt>
+<dd><tt>dictionary&nbsp;for&nbsp;instance&nbsp;variables&nbsp;(if&nbsp;defined)</tt></dd>
+</dl>
+<dl><dt><strong>__weakref__</strong></dt>
+<dd><tt>list&nbsp;of&nbsp;weak&nbsp;references&nbsp;to&nbsp;the&nbsp;object&nbsp;(if&nbsp;defined)</tt></dd>
+</dl>
+</td></tr></table> <p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ffc8d8">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#000000" face="helvetica, arial"><a name="BotTrainResponse">class <strong>BotTrainResponse</strong></a>(<a href="builtins.html#object">builtins.object</a>)</font></td></tr>
+    
+<tr bgcolor="#ffc8d8"><td rowspan=2><tt>&nbsp;&nbsp;&nbsp;</tt></td>
+<td colspan=2><tt><a href="#BotTrainResponse">BotTrainResponse</a>(success:&nbsp;bool)&nbsp;-&amp;gt;&nbsp;None<br>
+&nbsp;<br>
+<a href="#Bot">Bot</a>&nbsp;response&nbsp;when&nbsp;trained.<br>&nbsp;</tt></td></tr>
+<tr><td>&nbsp;</td>
+<td width="100%">Methods defined here:<br>
+<dl><dt><a name="BotTrainResponse-__init__"><strong>__init__</strong></a>(self, success: bool) -&gt; None</dt><dd><tt>Initialize&nbsp;self.&nbsp;&nbsp;See&nbsp;help(type(self))&nbsp;for&nbsp;accurate&nbsp;signature.</tt></dd></dl>
+
+<hr>
+Data descriptors defined here:<br>
+<dl><dt><strong>__dict__</strong></dt>
+<dd><tt>dictionary&nbsp;for&nbsp;instance&nbsp;variables&nbsp;(if&nbsp;defined)</tt></dd>
+</dl>
+<dl><dt><strong>__weakref__</strong></dt>
+<dd><tt>list&nbsp;of&nbsp;weak&nbsp;references&nbsp;to&nbsp;the&nbsp;object&nbsp;(if&nbsp;defined)</tt></dd>
+</dl>
+</td></tr></table> <p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ffc8d8">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#000000" face="helvetica, arial"><a name="ChatbotFactory">class <strong>ChatbotFactory</strong></a>(<a href="builtins.html#object">builtins.object</a>)</font></td></tr>
+    
+<tr bgcolor="#ffc8d8"><td rowspan=2><tt>&nbsp;&nbsp;&nbsp;</tt></td>
+<td colspan=2><tt>Factory&nbsp;for&nbsp;implementation&nbsp;of&nbsp;chatbots.<br>&nbsp;</tt></td></tr>
+<tr><td>&nbsp;</td>
+<td width="100%">Methods defined here:<br>
+<dl><dt><a name="ChatbotFactory-create_bot"><strong>create_bot</strong></a>(self, name, datadir, db, confidence_threshold, read_only) -&gt; bot.Bot</dt><dd><tt>create_bot&nbsp;factory&nbsp;method&nbsp;that&nbsp;returns&nbsp;an&nbsp;<a href="builtins.html#object">object</a>&nbsp;implementing&nbsp;bot&nbsp;interface.<br>
+&nbsp;<br>
+Input&nbsp;<br>
+-&nbsp;name&nbsp;&nbsp;&nbsp;&nbsp;:&nbsp;name&nbsp;of&nbsp;the&nbsp;bot&nbsp;for&nbsp;UI<br>
+-&nbsp;datadir&nbsp;:&nbsp;location&nbsp;of&nbsp;the&nbsp;data&nbsp;required&nbsp;to&nbsp;train&nbsp;the&nbsp;model<br>
+&nbsp;<br>
+Output&nbsp;<br>
+-&nbsp;Instance&nbsp;of&nbsp;a&nbsp;<a href="#Bot">Bot</a>&nbsp;<a href="builtins.html#object">object</a></tt></dd></dl>
+
+<hr>
+Data descriptors defined here:<br>
+<dl><dt><strong>__dict__</strong></dt>
+<dd><tt>dictionary&nbsp;for&nbsp;instance&nbsp;variables&nbsp;(if&nbsp;defined)</tt></dd>
+</dl>
+<dl><dt><strong>__weakref__</strong></dt>
+<dd><tt>list&nbsp;of&nbsp;weak&nbsp;references&nbsp;to&nbsp;the&nbsp;object&nbsp;(if&nbsp;defined)</tt></dd>
+</dl>
+</td></tr></table> <p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ffc8d8">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#000000" face="helvetica, arial"><a name="ChatterBotWrapper">class <strong>ChatterBotWrapper</strong></a>(<a href="bot.html#Bot">Bot</a>)</font></td></tr>
+    
+<tr bgcolor="#ffc8d8"><td rowspan=2><tt>&nbsp;&nbsp;&nbsp;</tt></td>
+<td colspan=2><tt><a href="#ChatterBotWrapper">ChatterBotWrapper</a>(name,&nbsp;datadir,&nbsp;db:&nbsp;db.DB,&nbsp;bot_response_retry_count=1,&nbsp;response_minimum_confidence_score=0.1,&nbsp;logic_adapters=['best_match.BestMatchWithConfidence'],&nbsp;read_only=True)<br>
+&nbsp;<br>
+<a href="#Bot">Bot</a>&nbsp;implementation&nbsp;of&nbsp;Chatterbot&nbsp;package.<br>
+&nbsp;<br>
+We&nbsp;are&nbsp;using&nbsp;Chatterbot&nbsp;both&nbsp;for&nbsp;training&nbsp;the&nbsp;model&nbsp;based&nbsp;on&nbsp;scrapped&nbsp;fields&nbsp;from&nbsp;Wikipedia&nbsp;as&nbsp;well&nbsp;as&nbsp;for&nbsp;interacting&nbsp;with&nbsp;the&nbsp;user.<br>
+&nbsp;<br>
+Configuration&nbsp;<br>
+-&nbsp;bot_response_retry_count:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;how&nbsp;many&nbsp;times&nbsp;to&nbsp;try&nbsp;to&nbsp;get&nbsp;a&nbsp;response&nbsp;from&nbsp;the&nbsp;bot&nbsp;when&nbsp;confidence&nbsp;score&nbsp;is&nbsp;lower&nbsp;the&nbsp;threshold<br>
+-&nbsp;response_minimum_confidence_score:&nbsp;&nbsp;&nbsp;&nbsp;confidence&nbsp;threshold&nbsp;score<br>&nbsp;</tt></td></tr>
+<tr><td>&nbsp;</td>
+<td width="100%"><dl><dt>Method resolution order:</dt>
+<dd><a href="bot.html#ChatterBotWrapper">ChatterBotWrapper</a></dd>
+<dd><a href="bot.html#Bot">Bot</a></dd>
+<dd><a href="builtins.html#object">builtins.object</a></dd>
+</dl>
+<hr>
+Methods defined here:<br>
+<dl><dt><a name="ChatterBotWrapper-__init__"><strong>__init__</strong></a>(self, name, datadir, db: db.DB, bot_response_retry_count=1, response_minimum_confidence_score=0.1, logic_adapters=['best_match.BestMatchWithConfidence'], read_only=True)</dt><dd><tt>Initialize&nbsp;self.&nbsp;&nbsp;See&nbsp;help(type(self))&nbsp;for&nbsp;accurate&nbsp;signature.</tt></dd></dl>
+
+<dl><dt><a name="ChatterBotWrapper-ask"><strong>ask</strong></a>(self, message) -&gt; bot.BotAskResponse</dt><dd><tt>Asking&nbsp;a&nbsp;bot&nbsp;with&nbsp;a&nbsp;message.<br>
+&nbsp;<br>
+Input&nbsp;<br>
+-&nbsp;message:&nbsp;text&nbsp;from&nbsp;the&nbsp;user&nbsp;of&nbsp;type&nbsp;string.<br>
+&nbsp;<br>
+Output&nbsp;<br>
+-&nbsp;<a href="#BotAskResponse">BotAskResponse</a>&nbsp;containing&nbsp;relevant&nbsp;reply&nbsp;from&nbsp;the&nbsp;bot.</tt></dd></dl>
+
+<dl><dt><a name="ChatterBotWrapper-train"><strong>train</strong></a>(self, reload=True) -&gt; bot.BotTrainResponse</dt><dd><tt>Training&nbsp;a&nbsp;model&nbsp;based&nbsp;on&nbsp;existing&nbsp;data.<br>
+&nbsp;<br>
+Input&nbsp;<br>
+-&nbsp;reload:&nbsp;whether&nbsp;to&nbsp;scrape&nbsp;for&nbsp;fields.<br>
+&nbsp;<br>
+Output&nbsp;<br>
+-&nbsp;<a href="#BotTrainResponse">BotTrainResponse</a>&nbsp;containing&nbsp;whether&nbsp;the&nbsp;train&nbsp;succeeded&nbsp;or&nbsp;failed.</tt></dd></dl>
+
+<hr>
+Data descriptors inherited from <a href="bot.html#Bot">Bot</a>:<br>
+<dl><dt><strong>__dict__</strong></dt>
+<dd><tt>dictionary&nbsp;for&nbsp;instance&nbsp;variables&nbsp;(if&nbsp;defined)</tt></dd>
+</dl>
+<dl><dt><strong>__weakref__</strong></dt>
+<dd><tt>list&nbsp;of&nbsp;weak&nbsp;references&nbsp;to&nbsp;the&nbsp;object&nbsp;(if&nbsp;defined)</tt></dd>
+</dl>
+</td></tr></table></td></tr></table><p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#55aa55">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial"><big><strong>Data</strong></big></font></td></tr>
+    
+<tr><td bgcolor="#55aa55"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><strong>CANT_FIND_AN_ANSWER_MESSAGE</strong> = 'Sorry i have no idea about that.'<br>
+<strong>List</strong> = typing.List<br>
+<strong>REFETCH_DOMAINS</strong> = True</td></tr></table>
+</body></html>

@@ -1,0 +1,282 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html><head><title>Python: module engine</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+</head><body bgcolor="#f0f0f8">
+
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="heading">
+<tr bgcolor="#7799ee">
+<td valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial">&nbsp;<br><big><big><strong>engine</strong></big></big></font></td
+><td align=right valign=bottom
+><font color="#ffffff" face="helvetica, arial"><a href=".">index</a><br><a href="file:c%3A%5Cusers%5Ckyriakos%5Cdesktop%5Cprojects%20with%20tb%5Coar%5Cengines%5Cengine.py">c:\users\kyriakos\desktop\projects with tb\oar\engines\engine.py</a></font></td></tr></table>
+    <p></p>
+<p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#aa55cc">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial"><big><strong>Modules</strong></big></font></td></tr>
+    
+<tr><td bgcolor="#aa55cc"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><table width="100%" summary="list"><tr><td width="25%" valign=top><a href="logging.html">logging</a><br>
+</td><td width="25%" valign=top></td><td width="25%" valign=top></td><td width="25%" valign=top></td></tr></table></td></tr></table><p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ee77aa">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial"><big><strong>Classes</strong></big></font></td></tr>
+    
+<tr><td bgcolor="#ee77aa"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><dl>
+<dt><font face="helvetica, arial"><a href="builtins.html#object">builtins.object</a>
+</font></dt><dd>
+<dl>
+<dt><font face="helvetica, arial"><a href="engine.html#QueryEngineFactory">QueryEngineFactory</a>
+</font></dt><dt><font face="helvetica, arial"><a href="engine.html#ResearchQueryEngine">ResearchQueryEngine</a>
+</font></dt><dd>
+<dl>
+<dt><font face="helvetica, arial"><a href="engine.html#GoogleScholarQueryEngine">GoogleScholarQueryEngine</a>
+</font></dt><dt><font face="helvetica, arial"><a href="engine.html#HistoricalQueryEngine">HistoricalQueryEngine</a>
+</font></dt><dt><font face="helvetica, arial"><a href="engine.html#MockEngine">MockEngine</a>
+</font></dt><dt><font face="helvetica, arial"><a href="engine.html#QueryEngineController">QueryEngineController</a>
+</font></dt></dl>
+</dd>
+<dt><font face="helvetica, arial"><a href="engine.html#SearchResults">SearchResults</a>
+</font></dt></dl>
+</dd>
+</dl>
+ <p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ffc8d8">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#000000" face="helvetica, arial"><a name="GoogleScholarQueryEngine">class <strong>GoogleScholarQueryEngine</strong></a>(<a href="engine.html#ResearchQueryEngine">ResearchQueryEngine</a>)</font></td></tr>
+    
+<tr bgcolor="#ffc8d8"><td rowspan=2><tt>&nbsp;&nbsp;&nbsp;</tt></td>
+<td colspan=2><tt><a href="#GoogleScholarQueryEngine">GoogleScholarQueryEngine</a>(db:&nbsp;db.DB)<br>
+&nbsp;<br>
+<a href="#GoogleScholarQueryEngine">GoogleScholarQueryEngine</a>&nbsp;is&nbsp;an&nbsp;`~engines.<a href="#ResearchQueryEngine">ResearchQueryEngine</a>`&nbsp;implementation&nbsp;of&nbsp;Google&nbsp;Scholar&nbsp;API.<br>&nbsp;</tt></td></tr>
+<tr><td>&nbsp;</td>
+<td width="100%"><dl><dt>Method resolution order:</dt>
+<dd><a href="engine.html#GoogleScholarQueryEngine">GoogleScholarQueryEngine</a></dd>
+<dd><a href="engine.html#ResearchQueryEngine">ResearchQueryEngine</a></dd>
+<dd><a href="builtins.html#object">builtins.object</a></dd>
+</dl>
+<hr>
+Methods defined here:<br>
+<dl><dt><a name="GoogleScholarQueryEngine-__init__"><strong>__init__</strong></a>(self, db: db.DB)</dt><dd><tt>Initialize&nbsp;self.&nbsp;&nbsp;See&nbsp;help(type(self))&nbsp;for&nbsp;accurate&nbsp;signature.</tt></dd></dl>
+
+<dl><dt><a name="GoogleScholarQueryEngine-search"><strong>search</strong></a>(self, keywords, search_results: engine.SearchResults) -&gt; List[article.ArticleSummary]</dt><dd><tt>search&nbsp;searches&nbsp;engines&nbsp;for&nbsp;results.<br>
+&nbsp;<br>
+Input&nbsp;<br>
+-&nbsp;keywords:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;list&nbsp;of&nbsp;keywords&nbsp;(string)&nbsp;to&nbsp;search&nbsp;for.<br>
+-&nbsp;search_params:&nbsp;&nbsp;&nbsp;&nbsp;set&nbsp;of&nbsp;configuration&nbsp;for&nbsp;the&nbsp;search.<br>
+&nbsp;<br>
+Output&nbsp;<br>
+-&nbsp;List&nbsp;of&nbsp;ArticleSummary&nbsp;results.</tt></dd></dl>
+
+<hr>
+Data and other attributes defined here:<br>
+<dl><dt><strong>GS_URL</strong> = 'https://scholar.google.com/scholar?hl=en&amp;as_sdt=0%2C5&amp;q='</dl>
+
+<hr>
+Data descriptors inherited from <a href="engine.html#ResearchQueryEngine">ResearchQueryEngine</a>:<br>
+<dl><dt><strong>__dict__</strong></dt>
+<dd><tt>dictionary&nbsp;for&nbsp;instance&nbsp;variables&nbsp;(if&nbsp;defined)</tt></dd>
+</dl>
+<dl><dt><strong>__weakref__</strong></dt>
+<dd><tt>list&nbsp;of&nbsp;weak&nbsp;references&nbsp;to&nbsp;the&nbsp;object&nbsp;(if&nbsp;defined)</tt></dd>
+</dl>
+</td></tr></table> <p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ffc8d8">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#000000" face="helvetica, arial"><a name="HistoricalQueryEngine">class <strong>HistoricalQueryEngine</strong></a>(<a href="engine.html#ResearchQueryEngine">ResearchQueryEngine</a>)</font></td></tr>
+    
+<tr bgcolor="#ffc8d8"><td rowspan=2><tt>&nbsp;&nbsp;&nbsp;</tt></td>
+<td colspan=2><tt><a href="#HistoricalQueryEngine">HistoricalQueryEngine</a>(db:&nbsp;db.DB)<br>
+&nbsp;<br>
+EBSCOQueryEngine&nbsp;is&nbsp;an&nbsp;engine&nbsp;implementation&nbsp;of&nbsp;EBSCO&nbsp;API.<br>&nbsp;</tt></td></tr>
+<tr><td>&nbsp;</td>
+<td width="100%"><dl><dt>Method resolution order:</dt>
+<dd><a href="engine.html#HistoricalQueryEngine">HistoricalQueryEngine</a></dd>
+<dd><a href="engine.html#ResearchQueryEngine">ResearchQueryEngine</a></dd>
+<dd><a href="builtins.html#object">builtins.object</a></dd>
+</dl>
+<hr>
+Methods defined here:<br>
+<dl><dt><a name="HistoricalQueryEngine-__init__"><strong>__init__</strong></a>(self, db: db.DB)</dt><dd><tt>Initialize&nbsp;self.&nbsp;&nbsp;See&nbsp;help(type(self))&nbsp;for&nbsp;accurate&nbsp;signature.</tt></dd></dl>
+
+<dl><dt><a name="HistoricalQueryEngine-search"><strong>search</strong></a>(self, keywords, search_results: engine.SearchResults) -&gt; List[article.ArticleSummary]</dt><dd><tt>search&nbsp;searches&nbsp;engines&nbsp;for&nbsp;results.<br>
+&nbsp;<br>
+Input&nbsp;<br>
+-&nbsp;keywords:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;list&nbsp;of&nbsp;keywords&nbsp;(string)&nbsp;to&nbsp;search&nbsp;for.<br>
+-&nbsp;search_params:&nbsp;&nbsp;&nbsp;&nbsp;set&nbsp;of&nbsp;configuration&nbsp;for&nbsp;the&nbsp;search.<br>
+&nbsp;<br>
+Output&nbsp;<br>
+-&nbsp;List&nbsp;of&nbsp;ArticleSummary&nbsp;results.</tt></dd></dl>
+
+<hr>
+Data descriptors inherited from <a href="engine.html#ResearchQueryEngine">ResearchQueryEngine</a>:<br>
+<dl><dt><strong>__dict__</strong></dt>
+<dd><tt>dictionary&nbsp;for&nbsp;instance&nbsp;variables&nbsp;(if&nbsp;defined)</tt></dd>
+</dl>
+<dl><dt><strong>__weakref__</strong></dt>
+<dd><tt>list&nbsp;of&nbsp;weak&nbsp;references&nbsp;to&nbsp;the&nbsp;object&nbsp;(if&nbsp;defined)</tt></dd>
+</dl>
+</td></tr></table> <p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ffc8d8">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#000000" face="helvetica, arial"><a name="MockEngine">class <strong>MockEngine</strong></a>(<a href="engine.html#ResearchQueryEngine">ResearchQueryEngine</a>)</font></td></tr>
+    
+<tr bgcolor="#ffc8d8"><td rowspan=2><tt>&nbsp;&nbsp;&nbsp;</tt></td>
+<td colspan=2><tt><a href="#MockEngine">MockEngine</a>&nbsp;is&nbsp;an&nbsp;engine&nbsp;for&nbsp;testing&nbsp;purposes.<br>&nbsp;</tt></td></tr>
+<tr><td>&nbsp;</td>
+<td width="100%"><dl><dt>Method resolution order:</dt>
+<dd><a href="engine.html#MockEngine">MockEngine</a></dd>
+<dd><a href="engine.html#ResearchQueryEngine">ResearchQueryEngine</a></dd>
+<dd><a href="builtins.html#object">builtins.object</a></dd>
+</dl>
+<hr>
+Methods defined here:<br>
+<dl><dt><a name="MockEngine-search"><strong>search</strong></a>(self, keywords, search_params) -&gt; List[article.ArticleSummary]</dt><dd><tt>search&nbsp;searches&nbsp;engines&nbsp;for&nbsp;results.<br>
+&nbsp;<br>
+Input&nbsp;<br>
+-&nbsp;keywords:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;list&nbsp;of&nbsp;keywords&nbsp;(string)&nbsp;to&nbsp;search&nbsp;for.<br>
+-&nbsp;search_params:&nbsp;&nbsp;&nbsp;&nbsp;set&nbsp;of&nbsp;configuration&nbsp;for&nbsp;the&nbsp;search.<br>
+&nbsp;<br>
+Output&nbsp;<br>
+-&nbsp;List&nbsp;of&nbsp;ArticleSummary&nbsp;results.</tt></dd></dl>
+
+<hr>
+Data descriptors inherited from <a href="engine.html#ResearchQueryEngine">ResearchQueryEngine</a>:<br>
+<dl><dt><strong>__dict__</strong></dt>
+<dd><tt>dictionary&nbsp;for&nbsp;instance&nbsp;variables&nbsp;(if&nbsp;defined)</tt></dd>
+</dl>
+<dl><dt><strong>__weakref__</strong></dt>
+<dd><tt>list&nbsp;of&nbsp;weak&nbsp;references&nbsp;to&nbsp;the&nbsp;object&nbsp;(if&nbsp;defined)</tt></dd>
+</dl>
+</td></tr></table> <p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ffc8d8">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#000000" face="helvetica, arial"><a name="QueryEngineController">class <strong>QueryEngineController</strong></a>(<a href="engine.html#ResearchQueryEngine">ResearchQueryEngine</a>)</font></td></tr>
+    
+<tr bgcolor="#ffc8d8"><td rowspan=2><tt>&nbsp;&nbsp;&nbsp;</tt></td>
+<td colspan=2><tt><a href="#QueryEngineController">QueryEngineController</a>(db:&nbsp;db.Persistance,&nbsp;execution_type:&nbsp;None)&nbsp;-&amp;gt;&nbsp;None<br>
+&nbsp;<br>
+<a href="#QueryEngineController">QueryEngineController</a>&nbsp;is&nbsp;a&nbsp;class&nbsp;responsible&nbsp;to&nbsp;orchestrate&nbsp;the&nbsp;search&nbsp;flow&nbsp;(i.e.&nbsp;calling&nbsp;engines)<br>&nbsp;</tt></td></tr>
+<tr><td>&nbsp;</td>
+<td width="100%"><dl><dt>Method resolution order:</dt>
+<dd><a href="engine.html#QueryEngineController">QueryEngineController</a></dd>
+<dd><a href="engine.html#ResearchQueryEngine">ResearchQueryEngine</a></dd>
+<dd><a href="builtins.html#object">builtins.object</a></dd>
+</dl>
+<hr>
+Methods defined here:<br>
+<dl><dt><a name="QueryEngineController-__init__"><strong>__init__</strong></a>(self, db: db.Persistance, execution_type: None) -&gt; None</dt><dd><tt>Creates&nbsp;an&nbsp;instance&nbsp;of&nbsp;the&nbsp;<a href="#QueryEngineController">QueryEngineController</a>&nbsp;<a href="builtins.html#object">object</a>.</tt></dd></dl>
+
+<dl><dt><a name="QueryEngineController-search"><strong>search</strong></a>(self, keywords, search_params: engine.SearchResults) -&gt; List[article.ArticleSummary]</dt><dd><tt>search&nbsp;performs&nbsp;the&nbsp;search&nbsp;based&nbsp;on&nbsp;the&nbsp;keywords&nbsp;and&nbsp;search&nbsp;configuration&nbsp;provided.&nbsp;This&nbsp;function&nbsp;is&nbsp;the&nbsp;brain&nbsp;of&nbsp;the&nbsp;<br>
+search&nbsp;process,&nbsp;as&nbsp;it&nbsp;sends&nbsp;the&nbsp;request&nbsp;to&nbsp;all&nbsp;engines&nbsp;and&nbsp;then&nbsp;joins&nbsp;them&nbsp;to&nbsp;a&nbsp;single&nbsp;list&nbsp;of&nbsp;ArticleSummary&nbsp;objects.<br>
+&nbsp;<br>
+Input&nbsp;<br>
+-&nbsp;keywords:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;list&nbsp;of&nbsp;keywords&nbsp;(string)&nbsp;to&nbsp;search&nbsp;for.<br>
+-&nbsp;search_params:&nbsp;&nbsp;&nbsp;&nbsp;set&nbsp;of&nbsp;configuration&nbsp;for&nbsp;the&nbsp;search.<br>
+&nbsp;<br>
+Output&nbsp;<br>
+-&nbsp;List&nbsp;of&nbsp;ArticleSummary&nbsp;results</tt></dd></dl>
+
+<hr>
+Data descriptors inherited from <a href="engine.html#ResearchQueryEngine">ResearchQueryEngine</a>:<br>
+<dl><dt><strong>__dict__</strong></dt>
+<dd><tt>dictionary&nbsp;for&nbsp;instance&nbsp;variables&nbsp;(if&nbsp;defined)</tt></dd>
+</dl>
+<dl><dt><strong>__weakref__</strong></dt>
+<dd><tt>list&nbsp;of&nbsp;weak&nbsp;references&nbsp;to&nbsp;the&nbsp;object&nbsp;(if&nbsp;defined)</tt></dd>
+</dl>
+</td></tr></table> <p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ffc8d8">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#000000" face="helvetica, arial"><a name="QueryEngineFactory">class <strong>QueryEngineFactory</strong></a>(<a href="builtins.html#object">builtins.object</a>)</font></td></tr>
+    
+<tr bgcolor="#ffc8d8"><td rowspan=2><tt>&nbsp;&nbsp;&nbsp;</tt></td>
+<td colspan=2><tt><a href="#QueryEngineFactory">QueryEngineFactory</a>(db:&nbsp;db.DB)&nbsp;-&amp;gt;&nbsp;None<br>
+&nbsp;<br>
+<a href="#QueryEngineFactory">QueryEngineFactory</a>&nbsp;is&nbsp;a&nbsp;class&nbsp;responsible&nbsp;to&nbsp;create&nbsp;engines&nbsp;to&nbsp;be&nbsp;used&nbsp;for&nbsp;the&nbsp;search&nbsp;queries.<br>&nbsp;</tt></td></tr>
+<tr><td>&nbsp;</td>
+<td width="100%">Methods defined here:<br>
+<dl><dt><a name="QueryEngineFactory-__init__"><strong>__init__</strong></a>(self, db: db.DB) -&gt; None</dt><dd><tt>Initialize&nbsp;self.&nbsp;&nbsp;See&nbsp;help(type(self))&nbsp;for&nbsp;accurate&nbsp;signature.</tt></dd></dl>
+
+<dl><dt><a name="QueryEngineFactory-engines"><strong>engines</strong></a>(self) -&gt; List[engine.ResearchQueryEngine]</dt><dd><tt>A&nbsp;list&nbsp;of&nbsp;engines&nbsp;to&nbsp;be&nbsp;used.<br>
+&nbsp;<br>
+Output&nbsp;<br>
+-&nbsp;List&nbsp;classes&nbsp;that&nbsp;implement&nbsp;<a href="#ResearchQueryEngine">ResearchQueryEngine</a></tt></dd></dl>
+
+<hr>
+Data descriptors defined here:<br>
+<dl><dt><strong>__dict__</strong></dt>
+<dd><tt>dictionary&nbsp;for&nbsp;instance&nbsp;variables&nbsp;(if&nbsp;defined)</tt></dd>
+</dl>
+<dl><dt><strong>__weakref__</strong></dt>
+<dd><tt>list&nbsp;of&nbsp;weak&nbsp;references&nbsp;to&nbsp;the&nbsp;object&nbsp;(if&nbsp;defined)</tt></dd>
+</dl>
+</td></tr></table> <p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ffc8d8">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#000000" face="helvetica, arial"><a name="ResearchQueryEngine">class <strong>ResearchQueryEngine</strong></a>(<a href="builtins.html#object">builtins.object</a>)</font></td></tr>
+    
+<tr bgcolor="#ffc8d8"><td rowspan=2><tt>&nbsp;&nbsp;&nbsp;</tt></td>
+<td colspan=2><tt><a href="#ResearchQueryEngine">ResearchQueryEngine</a>&nbsp;is&nbsp;an&nbsp;interface&nbsp;for&nbsp;engines.<br>&nbsp;</tt></td></tr>
+<tr><td>&nbsp;</td>
+<td width="100%">Methods defined here:<br>
+<dl><dt><a name="ResearchQueryEngine-search"><strong>search</strong></a>(self, keywords, search_params: engine.SearchResults) -&gt; List[article.ArticleSummary]</dt><dd><tt>search&nbsp;searches&nbsp;engines&nbsp;for&nbsp;results.<br>
+&nbsp;<br>
+Input&nbsp;<br>
+-&nbsp;keywords:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;list&nbsp;of&nbsp;keywords&nbsp;(string)&nbsp;to&nbsp;search&nbsp;for.<br>
+-&nbsp;search_params:&nbsp;&nbsp;&nbsp;&nbsp;set&nbsp;of&nbsp;configuration&nbsp;for&nbsp;the&nbsp;search.<br>
+&nbsp;<br>
+Output&nbsp;<br>
+-&nbsp;List&nbsp;of&nbsp;ArticleSummary&nbsp;results.</tt></dd></dl>
+
+<hr>
+Data descriptors defined here:<br>
+<dl><dt><strong>__dict__</strong></dt>
+<dd><tt>dictionary&nbsp;for&nbsp;instance&nbsp;variables&nbsp;(if&nbsp;defined)</tt></dd>
+</dl>
+<dl><dt><strong>__weakref__</strong></dt>
+<dd><tt>list&nbsp;of&nbsp;weak&nbsp;references&nbsp;to&nbsp;the&nbsp;object&nbsp;(if&nbsp;defined)</tt></dd>
+</dl>
+</td></tr></table> <p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ffc8d8">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#000000" face="helvetica, arial"><a name="SearchResults">class <strong>SearchResults</strong></a>(<a href="builtins.html#object">builtins.object</a>)</font></td></tr>
+    
+<tr bgcolor="#ffc8d8"><td rowspan=2><tt>&nbsp;&nbsp;&nbsp;</tt></td>
+<td colspan=2><tt><a href="#SearchResults">SearchResults</a>(max_search_results=10)&nbsp;-&amp;gt;&nbsp;None<br>
+&nbsp;<br>
+<a href="#SearchResults">SearchResults</a>&nbsp;is&nbsp;a&nbsp;class&nbsp;holding&nbsp;configuration&nbsp;for&nbsp;search&nbsp;queries.<br>
+&nbsp;<br>
+Configuration<br>
+-&nbsp;max_search_results:&nbsp;limit&nbsp;on&nbsp;the&nbsp;amount&nbsp;of&nbsp;search&nbsp;results<br>&nbsp;</tt></td></tr>
+<tr><td>&nbsp;</td>
+<td width="100%">Methods defined here:<br>
+<dl><dt><a name="SearchResults-__init__"><strong>__init__</strong></a>(self, max_search_results=10) -&gt; None</dt><dd><tt>Initialize&nbsp;self.&nbsp;&nbsp;See&nbsp;help(type(self))&nbsp;for&nbsp;accurate&nbsp;signature.</tt></dd></dl>
+
+<hr>
+Data descriptors defined here:<br>
+<dl><dt><strong>__dict__</strong></dt>
+<dd><tt>dictionary&nbsp;for&nbsp;instance&nbsp;variables&nbsp;(if&nbsp;defined)</tt></dd>
+</dl>
+<dl><dt><strong>__weakref__</strong></dt>
+<dd><tt>list&nbsp;of&nbsp;weak&nbsp;references&nbsp;to&nbsp;the&nbsp;object&nbsp;(if&nbsp;defined)</tt></dd>
+</dl>
+</td></tr></table></td></tr></table><p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#55aa55">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial"><big><strong>Data</strong></big></font></td></tr>
+    
+<tr><td bgcolor="#55aa55"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><strong>List</strong> = typing.List</td></tr></table>
+</body></html>

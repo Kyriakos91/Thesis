@@ -1,0 +1,27 @@
+# Database
+SQLALCHEMY_DATABASE_URI = "sqlite:///db.sqlite3"
+
+# Bot
+BOT_CORPUS_DATA_DIR = "./data/"
+BOT_NAME = "Bot"
+BOT_CONFIDENCE_THRESHOLD = 0.1
+BOT_LEARN_FROM_CHAT = False
+
+# Engine
+ENGINE_MAX_UI_RESULTS = 10
+ENGINE_EXECUTION_MODEL = "priority" #priority / scattergetter
+ENGINE_MAX_PAGES_PROCESS = 10
+
+# Backend 
+BACKEND_LOG_LEVEL = "debug"
+BACKEND_PERMISSION_POLICY = "InMemoryPermission" #NoRestrictionsPermission/InMemoryPermission
+BACKEND_PERMISSION_TTL = 60
+BACKEND_TOTAL_SEARCH_ATTEMPTS = 1
+
+#PDF
+PDF_MULTIPROCESSING_ENABLED = True
+PDF_MULTIPROCESSING_PARALLELISM_COUNT = -1 #-1 as available cores
+PDF_ENGINE = "pymu" #pymu/pdf2/pdfmine
+PDF_PAGE_READ_STRATEGY = "portion" #all/portion
+PDF_PORTION_BEGINING_COUNT = 33
+PDF_PORTION_ENDING_COUNT = 33

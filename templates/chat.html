@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html>
+
+    <head lang="en">
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Chatbot</title>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+        <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet">
+        <link href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" rel="stylesheet">
+
+        <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+        <script src="/static/scripts.js"></script>
+        <link rel="stylesheet" type="text/css" href="/static/style.css"/>
+        <svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
+          <symbol xmlns="http://www.w3.org/2000/svg" viewBox="0 0 160 28" id="path">
+              <path d="M32.9418651,-20.6880772 C37.9418651,-20.6880772 40.9418651,-16.6880772 40.9418651,-12.6880772 C40.9418651,-8.68807717 37.9418651,-4.68807717 32.9418651,-4.68807717 C27.9418651,-4.68807717 24.9418651,-8.68807717 24.9418651,-12.6880772 C24.9418651,-16.6880772 27.9418651,-20.6880772 32.9418651,-20.6880772 L32.9418651,-29.870624 C32.9418651,-30.3676803 33.3448089,-30.770624 33.8418651,-30.770624 C34.08056,-30.770624 34.3094785,-30.6758029 34.4782612,-30.5070201 L141.371843,76.386562" transform="translate(83.156854, 22.171573) rotate(-225.000000) translate(-83.156854, -22.171573)"></path>
+          </symbol>
+      </svg>
+    </head>
+
+    <body>
+
+      <div id="welcome-popup" class="welcome-popup">
+        <h3 class="welcome-popup-title">Welcome To OAR!</h3>
+        </h4>
+        <section class="welcome-images">
+          <div id="img0" class="first-image weclome-image-step">
+            <img class="first-image welcome-image" src="/static/page_one.png">
+            <span class="welcome-image-text">Talk with the bot to discover domains of interest.</span>
+          </div>
+          <div id="img1" class="second-image weclome-image-step" style="display: none;">
+            <img class="second-image welcome-image" src="/static/page_two.png">
+            <span class="welcome-image-text">Pick the domains provided from the bot and/or add your custom ones.</span>
+          </div>
+          <div id="img2" class="third-image weclome-image-step" style="display: none;">
+            <img class="third-image welcome-image" src="/static/page_three.png">
+            <span class="welcome-image-text">Explore the results that were generated from your choices.</span>
+          </div>
+        </section>
+        <div class="welcome-navigation">
+          <button class="fas fa-solid fa-angle-left previous-image"></button>  
+          <button class="fas fa-solid fa-angle-right next-image"></button>
+        </div>
+        <div class="close-welcome">
+          <button class="close-welcome-btn">Got it!</button>
+        </div>
+      </div>
+
+      <div id="popup" class="popup" style="visibility: hidden;">
+          <h3 class="accordion-row popup-title">Article Search Results</h3>
+          <h4 class="accordion-row popup-title-domains">
+
+          </h4>
+          <section class="accordion-row">
+            <ul class="accordion">
+            </ul>
+          </section>
+          <button class="md-close fas fa-times-circle"></button>
+      </div>
+
+      <div class="feedback-btn">
+        <p class="feedback-txt">Feedback</p>
+      </div>
+
+      <div id="feedback" class="feedback-popup" style="visibility: hidden;">
+        <h3 class="feedback-title">Feedback</h3>
+        <div class="feedback">
+          <p>I would very much appreciate your feedback in order to have some data and improve my research!</p>
+          <p>Here is a <a href="https://forms.gle/prtG9Vn6LL3VLDd36" target="_blank">link</a> for a google survey, thank you!</p>
+         
+          <button class="feedback-close fas fa-times-circle"></button>
+        </div>
+      </div>
+
+      <div id="domain-selection" class="domain-selection-popup" style="visibility: hidden;">
+        <div class="domain-selection-title">
+          <button class="domain-close fas fa-times-circle"></button>
+          <h3 class="feedback-title">Domain Selection</h3>
+        </div>
+
+        <div class="domain-selection-content">
+          <span>Domains from chat</span>
+          <div class="domains-content">
+            <ul id="domains-from-chat" class="domains-list">
+            </ul>
+          </div>
+          <div class="extra-domains-content">
+            <span>Add your custom domains<span>
+              <input class="custom-domains" id="customeDomain" type="text" placeholder="Type a custom domain..." />
+              <button type="button" class="domain-add-btn"><i class="fas fa-plus"></i></button>
+            <ul id="domains-from-form" class="domains-list">
+            </ul>
+          </div>
+        </div>
+        
+        <div class="domain-selection-submit">
+          <button id="execute-search" class="execute-search">Search</button>
+        </div>
+      </div>
+
+      <div class="aboutme" >
+        <img class="pic" src="/static/me.jpeg">
+        <div class="aboutme-title">Kyriakos Chatzicharalampous</div>
+        <div class="aboutme-content">
+          <p stype="font-size: 20px; padding-top: 5px;">Welcome</p>
+          <p>
+            This is my thesis project for obtaining my masters degree in Business Intelligence and Data Analytics.
+This project aims to help you scan the web for academical papers out there, so you can get inspiration, get familiar with unknown domains and learn!
+          </p>
+        </div>
+      </div>
+      
+      <div class="container">  
+        <div class="chatbox">
+            <div class="top-bar">
+              <div class="avatar"><p>O</p></div>
+              <div class="name">Online Assistant Researcher</div>
+              <div class="icons">
+                <i class="fas fa-eraser clearbtn"></i>
+              </div>
+            </div>
+            <div class="middle">
+              <div class="voldemort">
+                <ul>
+                </ul>
+              </div>
+            </div>
+            <div class="bottom-bar">
+              <div class="chat">
+                <form method="post" id="chatbot-form" class="chat-form">
+                  <input class="chatting" id="messageText" type="text" placeholder="Type a message..." />
+                  <button type="submit" class="chat-btn"><i class="fas fa-paper-plane"></i></button>
+                  <button type="button" class="select-btn"><i class="fas fa-cogs"></i></button>
+                </form>
+              </div>
+            </div>
+          </div>
+        <div class="messages">
+            <div class="profile">
+              <div class="name2">SEARCH HISTORY</div>
+            </div>
+
+            <div class="no-results">
+              <div class="fab fa-searchengin no-results-icon"></div>
+              <div class="no-results-title">No Results</div>
+              <div class="no-results-sub-title">Chat with the bot to create new ones</div>
+            </div>
+            
+            <ul class="people" style="display: none;">
+            </ul>
+         </div>
+      </div>
+    </body>
+</html>
